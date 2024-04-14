@@ -38,16 +38,16 @@ const error=(msg:string):never=>{
 
 ///object///
 
-let book:string|number;
-book="война и мир";
-book="Tolstoy";
-book=1869
+const book=(o:object):void=>{}
+book({obj:"война и мир"})
+book({obj:"Tolstoy"})
+book({obj:1869})
 
 
-let me:string|number;
-me="Markha";
-me="KHataeva";
-me=16
+const me=(m:object):void=>{}
+me({obj:"Markha"})
+me({obj:"KHataeva"})
+me({obj:16})
 
 
 const created=(h:object|null):void=>{}
@@ -58,42 +58,55 @@ created({obj:1})
 let favcolor:any="blue";
 let s:[any,any,any]=["sa",23,true]
 
-const nn=(a:any):void=>{}
+const nn=(a:any):void=>{
+    console.log(a)
+}
 
 
 ///type
-type Person=string|number;
-let Name:Person;
-Name="Markha"
-let age:Person;
-age=16;
 
-
-type product=string|number|boolean;
-let namee:product;
-namee="apple";
-let price:product;
-price=100;
-let inStock:product;
-inStock=true;
+type Person={
+    name:string,
+    age:number
+}
+type person={
+    name:"lili",
+    age:13
+}
 
 
 
-type User=number|string|string;
-let id:User;
-id=12;
-let username:User;
-username="sssir";
-let email:User;
-email="xxjq.com";
+type product={
+    name:string,
+    price:number,
+    inStock:boolean
+}
+type Product={
+    name:"apple",
+    price:25,
+    inStock:true
+}
 
 
+type User={
+    id:number,
+    username:string,
+    email:string
+}
 
-type Account=number|number;
-let Id:Account;
-Id=23;
-let balance:Account;
-balance=21313;
+let user:User={
+    id:12,
+    username:"petrushkina",
+    email:"swqsmd.com"
+}
 
 
+type Account={
+    id:string,
+    balance:number
+}
+type account={
+    id:123,
+    balance:123232
+}
 
